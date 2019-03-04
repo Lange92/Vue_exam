@@ -102,9 +102,9 @@
               <h3>size</h3>
               <select name id="Pcontainer__input--option">
                 <option value="GDP">Select Size</option>
-                <option value="DKK">S</option>
-                <option value="EURO">M</option>
-                <option value="EURO">L</option>
+                <option value="DKK">{{ product.sizes[0] }}</option>
+                <option value="EURO">{{ product.sizes[1] }}</option>
+                <option value="EURO">{{ product.sizes[2] }}</option>
               </select>
             </div>
             <div>
@@ -158,98 +158,25 @@
 
           <div class="content">
             <div v-if="activetab === 1" class="tabcontent">
-              <h5>Nunc egestas posuere enim, eu maximus erat posuere eget</h5>
-              <p>
-                Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis.
-                Nulla sapien magna, interdum quis pretium nec, pharetra at
-                felis. Curabitur dictum sapien est, eget ultricies turpis porta
-                vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus
-                risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet
-                pretium elit. Aliquam congue, ligula id vehicula vestibulum,
-                orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed
-                quis aliquet risus, ut cursus lectus. In eget lorem tellus.
-                Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper
-                imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis
-                urna et hendrerit sodales. Nunc molestie risus nec fringilla
-                lacinia. Nulla facilisi. Etiam neque velit, tristique eget
-                sollicitudin eget, placerat at metus. Proin dictum lobortis
-                velit, id suscipit orci faucibus ut. Aliquam erat volutpat.
-                Vivamus feugiat justo in diam placerat, id dignissim elit
-                auctor. Vestibulum scelerisque sem et lobortis ultricies. Morbi
-                suscipit nulla urna. Suspendisse potenti. Nullam varius quam sed
-                nisl dignissim, vel faucibus ipsum blandit. Vivamus at suscipit
-                augue. Nam finibus gravida lorem eu viverra. Praesent rhoncus
-                imperdiet ultricies. Nullam pretium cursus augue auctor
-                vulputate. Quisque a convallis diam commodo eget diam id,
-                eleifend dictum libero. Etiam varius, nisi vel dignissim
-                sodales, enim dui posuere mauris, in aliquet lorem eros eget
-                neque.
-              </p>
+              <h5>{{ product.longDescription.highlightText }}</h5>
+              <p>{{ product.longDescription.longText }}</p>
             </div>
             <div v-if="activetab === 2" class="tabcontent">
               <h5>Video</h5>
-              <p>
-                Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis.
-                Nulla sapien magna, interdum quis pretium nec, pharetra at
-                felis. Curabitur dictum sapien est, eget ultricies turpis porta
-                vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus
-                risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet
-                pretium elit. Aliquam congue, ligula id vehicula vestibulum,
-                orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed
-                quis aliquet risus, ut cursus lectus. In eget lorem tellus.
-                Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper
-                imperdiet justo, ut venenatis purus lobortis ut. Nunc sagittis
-                urna et hendrerit sodales. Nunc molestie risus nec fringilla
-              </p>
+              <p>{{ product.longDescription.longText }}</p>
             </div>
             <div v-if="activetab === 3" class="tabcontent">
               <h5>Here you can find sizes</h5>
-              <p>
-                Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis.
-                Nulla sapien magna, interdum quis pretium nec, pharetra at
-                felis. Curabitur dictum sapien est, eget ultricies turpis porta
-                vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus
-                risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet
-                pretium elit. Aliquam congue, ligula id vehicula vestibulum,
-                orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed
-                quis aliquet risus, ut cursus lectus. In eget lorem tellus.
-                Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper And
-                there is a lot more to find if you look
-              </p>
+              <p>{{ product.sizeTab }}</p>
             </div>
             <div v-if="activetab === 4" class="tabcontent">
               <h5>WE DONT DELIVER OR RETURN</h5>
-              <p>
-                Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis.
-                Nulla sapien magna, interdum quis pretium nec, pharetra at
-                felis. Curabitur dictum sapien est, eget ultricies turpis porta
-                vel. Nam suscipit nec lacus sed imperdiet. Vestibulum a purus
-                risus. Nulla et dictum augue, nec efficitur mi. Nam sit amet
-                pretium elit. Aliquam congue, ligula id vehicula vestibulum,
-                orci ex vulputate lacus, ac malesuada elit dolor eget ex. Sed
-                quis aliquet risus, ut cursus lectus. In eget lorem tellus.
-                Quisque eleifend varius nisi nec sagittis. Nulla ullamcorper And
-                there is a lot more to find if you look
-              </p>
+              <p>{{ product.delivery }}</p>
             </div>
           </div>
           <div v-if="activetab === 5" class="tabcontent">
             <h5>Our reviews are wonderful, you wouldnt believe it</h5>
-            <p>
-              Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla
-              sapien magna, interdum quis pretium nec, pharetra at felis.
-              Curabitur dictum sapien est, eget ultricies turpis porta vel. Nam
-              suscipit nec lacus sed imperdiet. Vestibulum a purus risus. Nulla
-              et dictum augue, nec efficitur mi. Nam sit amet pretium elit.
-              Aliquam congue, ligula id vehicula vestibulum, orci ex vulputate
-              lacus, ac malesuada elit dolor eget ex. Sed quis aliquet risus, ut
-              cursus lectus. In eget lorem tellus. Quisque eleifend varius nisi
-              nec sagittis. Nulla ullamcorper And there is a lot more to find if
-              you looklacus, ac malesuada elit dolor eget ex. Sed quis aliquet
-              risus, ut cursus lectus. In eget lorem tellus. Quisque eleifend
-              varius nisi nec sagittis. Nulla ullamcorper And there is a lot
-              more to find if you look
-            </p>
+            <p>{{ product.reviews }}</p>
           </div>
         </div>
       </div>
