@@ -31,9 +31,9 @@
       </div>
     </div>
     <div class="width-container-two">
-      <div class="container">
+      <div v-for="product in products" :key="product.id" class="container">
         <div class="image-container">
-          <router-link to="Productview">
+          <router-link :to="'/Productview/' + product.id">
             <img src="../assets/imgs/homepagegrid1.png" />
           </router-link>
           <div class="top-left"><span>$</span>89.99</div>
@@ -42,7 +42,7 @@
             Classic casual t-short for women on the move. 100% cotton.
           </div>
         </div>
-        <div class="image-container">
+        <!-- <div class="image-container">
           <img src="../assets/imgs/homepagegrid2.png" />
           <div class="top-left"><span>$</span>47.50</div>
           <div class="product-desc">
@@ -82,7 +82,7 @@
             <span>womens burnt orange casual tee $29.95</span>
             Classic casual t-short for women on the move. 100% cotton.
           </div>
-        </div>
+        </div>-->
       </div>
       <hr />
     </div>
@@ -139,5 +139,26 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      products: []
+    }
+  },
+  created() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      axios
+        .get('https://my-json-server.typicode.com/Lange92/Vue_exam/products')
+        .then(response => {
+          this.products = response.data
+          console.log(this.products)
+        })
+        .catch(err => console.log(err.message))
+    }
+  }
+}
 </script>

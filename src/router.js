@@ -36,7 +36,7 @@ export default new Router({
       component: Thebrand
     },
     {
-      path: '/Productview',
+      path: '/Productview/:id',
       name: 'Productview',
       component: Productview
     }

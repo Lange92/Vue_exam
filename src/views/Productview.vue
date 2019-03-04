@@ -54,18 +54,18 @@
               <h3>
                 <span>£</span>
               </h3>
-              <h3 class="Pcontainer__price--line">107</h3>
+              <h3 class="Pcontainer__price--line">{{ product.price }}</h3>
               <h3>
                 <span>£</span>
               </h3>
-              <h3>89.99</h3>
+              <h3>{{ product.price }}</h3>
             </div>
           </div>
           <div class="Pcontainer__elem">
             <div class="Pcontainer__info">
               <h4>
                 AVAILABILITY:
-                <span>In stock</span>
+                <span>{{ product.availability }}</span>
               </h4>
               <h4>
                 PRODUCT CODE:
@@ -263,11 +263,29 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data: function() {
-    return { activetab: 1 }
+    return { activetab: 1, product: {} }
+  },
+  created() {
+    this.getData()
+  },
+  methods: {
+    getData() {
+      let productId = this.$route.params.id
+      axios
+        .get(
+          'https://my-json-server.typicode.com/Lange92/Vue_exam/products/' +
+            productId
+        )
+        .then(response => {
+          this.product = response.data
+          console.log(this.product)
+        })
+        .catch(err => console.log(err.message))
+    }
   }
 }
 </script>
-
-<style></style>
