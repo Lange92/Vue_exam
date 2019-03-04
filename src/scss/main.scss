@@ -467,14 +467,23 @@ input[type='reset'],
   div:nth-child(4n) {
     grid-column: 1 / 7;
     grid-row: 2 / 4;
+    &:hover {
+      cursor: no-drop;
+    }
   }
   div:nth-child(5n) {
     grid-column: 7 / 10;
     grid-row: 3 / 4;
+    &:hover {
+      cursor: no-drop;
+    }
   }
   div:nth-child(6n) {
     grid-column: 10 / 13;
     grid-row: 3 / 4;
+    &:hover {
+      cursor: no-drop;
+    }
   }
 }
 
@@ -1188,7 +1197,7 @@ input[type='reset'],
 
 @media only screen and (max-width: 1699px) {
   .product-desc {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
 }
 

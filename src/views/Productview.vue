@@ -69,28 +69,21 @@
               </h4>
               <h4>
                 PRODUCT CODE:
-                <span>#499577</span>
+                <span>{{ product.id }}</span>
               </h4>
               <h4>
                 TAGS:
-                <span class="Pcontainer__info--blue"
-                  >Classic, Casual, V-Neck, Loose</span
-                >
+                <span class="Pcontainer__info--blue">{{ product.tags }}</span>
               </h4>
             </div>
           </div>
           <div class="Pcontainer__infotext">
-            <p>
-              Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh
-              suspendisse est congue metus nunc, id viverra elit loreti rhoncus
-              quis consecteur es. Donec pulvinar tempor lorem a pretium justo
-              interdum.
-            </p>
+            <p>{{ product.shortDescription }}</p>
             <ul class="Pcontainer__infotext--circle">
-              <li>Elsaticated cuffs</li>
-              <li>Casual fit</li>
-              <li>100% Cotton</li>
-              <li>Free Shipping with 4 days delivery</li>
+              <li>{{ product.descriptionPerks[0] }}</li>
+              <li>{{ product.descriptionPerks[1] }}</li>
+              <li>{{ product.descriptionPerks[2] }}</li>
+              <li>{{ product.descriptionPerks[3] }}</li>
             </ul>
           </div>
           <div class="Pcontainer__input">
@@ -98,9 +91,11 @@
               <h3>Colour</h3>
               <select name id="Pcontainer__input--option">
                 <option value="GDP">Select Colour</option>
-                <option value="DKK">Red</option>
-                <option value="EURO">Blue</option>
-                <option value="EURO">Green</option>
+                <option value="DKK">{{ product.color[0] }}</option>
+                <option value="EURO">{{ product.color[1] }}</option>
+                <option value="EURO">{{ product.color[2] }}</option>
+                <option value="EURO">{{ product.color[3] }}</option>
+                <option value="EURO">{{ product.color[4] }}</option>
               </select>
             </div>
             <div>

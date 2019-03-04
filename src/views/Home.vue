@@ -38,7 +38,7 @@
           class="image-container"
         >
           <router-link :to="'/Productview/' + product.id">
-            <img src="../assets/imgs/homepagegrid1.png" />
+            <img :src="require('@/assets/imgs/' + product.image)" alt />
           </router-link>
           <div class="top-left"><span>$</span>89.99</div>
           <div class="product-desc">
@@ -46,8 +46,9 @@
             Classic casual t-short for women on the move. 100% cotton.
           </div>
         </div>
-        <!-- <div class="image-container">
-          <img src="../assets/imgs/homepagegrid2.png" />
+
+        <div class="image-container">
+          <img src="../assets/imgs/homepagegrid4.png" />
           <div class="top-left"><span>$</span>47.50</div>
           <div class="product-desc">
             <span>womens burnt orange casual tee $29.95</span>
@@ -55,7 +56,7 @@
           </div>
         </div>
         <div class="big image-container">
-          <img src="../assets/imgs/homepagegrid3.png" alt />
+          <img src="../assets/imgs/homepagegrid5.png" alt />
           <div class="top-left"><span>$</span>89.99</div>
           <div class="product-desc big-pic">
             <span>womens burnt orange casual tee $29.95</span>
@@ -63,14 +64,14 @@
           </div>
         </div>
         <div class="big image-container">
-          <img src="../assets/imgs/homepagegrid4.png" alt />
+          <img src="../assets/imgs/homepagegrid6.png" alt />
           <div class="top-left"><span>$</span>69.95</div>
           <div class="product-desc big-pic">
             <span>womens burnt orange casual tee $29.95</span>
             Classic casual t-short for women on the move. 100% cotton.
           </div>
         </div>
-        <div class="image-container">
+        <!--<div class="image-container">
           <img src="../assets/imgs/homepagegrid5.png" alt />
           <div class="top-left"><span>$</span>29.95</div>
           <div class="product-desc">
