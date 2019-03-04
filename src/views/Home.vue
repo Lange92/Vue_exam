@@ -31,8 +31,12 @@
       </div>
     </div>
     <div class="width-container-two">
-      <div v-for="product in products" :key="product.id" class="container">
-        <div class="image-container">
+      <div class="container">
+        <div
+          v-for="product in products"
+          :key="product.id"
+          class="image-container"
+        >
           <router-link :to="'/Productview/' + product.id">
             <img src="../assets/imgs/homepagegrid1.png" />
           </router-link>

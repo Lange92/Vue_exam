@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 499577,
-      "image": "homepagegrid2.png",
+      "image": "homepagegrid1.png",
       "gender": "mens",
       "style": "casual",
       "category": "hoodies & sweatshirts",
@@ -32,7 +32,7 @@
 
     {
       "id": 499578,
-      "image": "item 2.png",
+      "image": "homepagegrid2.png",
       "gender": "womens",
       "style": "casual",
       "category": "t-shirts",
@@ -61,7 +61,7 @@
     },
     {
       "id": 499579,
-      "image": "item 3.png",
+      "image": "homepagegrid3.png",
       "gender": "mens",
       "style": "casual",
       "category": "hoodies & sweatshirts",

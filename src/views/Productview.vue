@@ -10,7 +10,7 @@
     <div class="width-container">
       <div class="Pcontainer">
         <div>
-          <img src="../assets/imgs/productpic1.png" alt />
+          <img :src="require('@/assets/imgs/' + product.image)" alt />
         </div>
         <div class="Pcontainer__elem">
           <h1 class="Pcontainer__elem--h1">Ave classic sweatshirt</h1>
