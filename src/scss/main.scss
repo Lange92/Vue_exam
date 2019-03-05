@@ -50,7 +50,7 @@ a:visited {
   margin: auto;
 }
 .width-container-two {
-  width: 90%;
+  width: 70%;
   margin: auto;
 }
 
@@ -771,10 +771,6 @@ input[type='reset'],
     grid-column: 1 / 13;
     grid-row: 2 / 3;
   }
-  div:nth-child(4n) {
-    grid-column: 7 / 13;
-    grid-row: 2 / 2;
-  }
 
   div img {
     width: 100%;
@@ -1171,6 +1167,14 @@ input[type='reset'],
     p {
       visibility: hidden;
     }
+    span {
+      font-size: 100px;
+    }
+  }
+  .lookbook-container__item {
+    button {
+      padding: 10px;
+    }
   }
 }
 
@@ -1189,9 +1193,116 @@ input[type='reset'],
   }
 }
 
+@media only screen and (max-width: 1571px) {
+  .promo-slider {
+    margin-top: -152px;
+  }
+}
+
+@media only screen and (max-width: 1195px) {
+  .promo-slider {
+    margin-top: -170px;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .lookbook-container__item .lookbook-container__button {
+    p {
+      font-size: 15px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    margin-top: 15px;
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
 @media only screen and (max-width: 924px) {
   .promo-slider {
     margin-top: -170px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lookbook-container__item {
+    div:nth-child(1n) {
+      grid-column: 1 / 13;
+      grid-row: 1;
+    }
+    div:nth-child(2n) {
+      grid-column: 1 / 13;
+      grid-row: 2;
+    }
+    div:nth-child(3n) {
+      grid-column: 1 / 13;
+      grid-row: 3;
+    }
+  }
+  p {
+    visibility: visible !important;
+    font-size: 12px !important;
+  }
+
+  .container {
+    div:nth-child(1n) {
+      grid-column: 1 / 13;
+      grid-row: 1 / 1;
+    }
+    div:nth-child(2n) {
+      grid-column: 1 / 13;
+      grid-row: 2 / 2;
+    }
+    div:nth-child(3n) {
+      grid-column: 1 / 13;
+      grid-row: 3 / 3;
+    }
+    div:nth-child(4n) {
+      grid-column: 1 / 13;
+      grid-row: 4 / 4;
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+    div:nth-child(5n) {
+      grid-column: 1 / 13;
+      grid-row: 4 / 4;
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+    div:nth-child(6n) {
+      grid-column: 1 / 13;
+      grid-row: 5 / 5;
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+  }
+  .Pcontainer {
+    div:nth-child(1n) {
+      grid-column: 1 / 13;
+      grid-row: 1 / 1;
+    }
+    div:nth-child(2n) {
+      grid-column: 1 / 13;
+      grid-row: 2 / 2;
+    }
+    div:nth-child(3n) {
+      grid-column: 1 / 13;
+      grid-row: 3 / 3;
+    }
+    .Pcontainer__price {
+      margin: 0;
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+  .img-landing-page {
+    display: none;
   }
 }
 

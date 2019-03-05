@@ -7,7 +7,7 @@
         class="img-landing-page"
       />
     </div>
-    <div class="width-container">
+    <div class="width-container-two">
       <div class="Pcontainer">
         <div>
           <img :src="require('@/assets/imgs/' + product.image)" alt />
