@@ -128,6 +128,7 @@ li p {
 .footer-copyright {
   align-items: baseline;
   display: flex;
+  flex-wrap: wrap;
   color: #696969;
   width: 80%;
   margin: auto;
@@ -295,6 +296,7 @@ input[type='reset'],
   text-transform: uppercase;
   font-size: 13px;
   display: flex;
+  flex-wrap: wrap;
   font-family: $fontHeader;
   font-weight: bold;
   li {
@@ -1227,6 +1229,33 @@ input[type='reset'],
 }
 
 @media only screen and (max-width: 600px) {
+  .main-header h5 {
+    font-size: 12px;
+  }
+  .searchfield-container input[type='text'] {
+    display: none;
+  }
+  .category-menu__tab {
+    top: 295px;
+  }
+  .category-products .category__list {
+    padding-right: 0;
+  }
+  .product-item__banner {
+    display: none;
+  }
+  .clothing-deals ul {
+    flex-direction: column;
+  }
+  .logo {
+    text-align: center;
+  }
+  .promo-slider {
+    display: none;
+  }
+  .nav-container {
+    flex-direction: column;
+  }
   .lookbook-container__item {
     div:nth-child(1n) {
       grid-column: 1 / 13;
@@ -1303,6 +1332,35 @@ input[type='reset'],
   }
   .img-landing-page {
     display: none;
+  }
+  .award-banner {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .some-banner {
+    width: 100%;
+    font-size: 35px;
+    padding: 50px 0;
+    margin-top: 0;
+  }
+
+  .footer-banners {
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    div:nth-child(1n) {
+      grid-column: 1 / 13;
+      grid-row: 1 / 2;
+    }
+    div:nth-child(2n) {
+      grid-column: 1 / 13;
+      grid-row: 2 / 3;
+    }
   }
 }
 

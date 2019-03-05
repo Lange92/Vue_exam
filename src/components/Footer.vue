@@ -66,7 +66,8 @@
             </ul>
           </div>
         </div>
-
+      </div>
+      <div class="width-container">
         <div class="footer-banners">
           <div class="award-banner">
             <h3><span>AWARD WINNER</span> FASHION AWARDS 2016</h3>
@@ -81,17 +82,17 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="copyright-bg">
-      <div class="footer-copyright">
-        <div>
-          <h5>&copy; 2019 Avenue Fashion&trade;</h5>
-        </div>
-        <div class="push">
-          <h5>Design by RobbyDesigns.com</h5>
-        </div>
-        <div>
-          <h5>Dev by Jesper Lange Nielsen</h5>
+      <div class="copyright-bg">
+        <div class="footer-copyright">
+          <div>
+            <h5>&copy; 2019 Avenue Fashion&trade;</h5>
+          </div>
+          <div class="push">
+            <h5>Design by RobbyDesigns.com</h5>
+          </div>
+          <div>
+            <h5>Dev by Jesper Lange Nielsen</h5>
+          </div>
         </div>
       </div>
     </div>
